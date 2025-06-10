@@ -6,8 +6,8 @@
 *   **Hypothesized Classes:** Manual inspection suggests:
     *   Class 0: Person with an accessory (e.g., hat, glasses, cap).
     *   Class 1: Person without an accessory.
-    *   *Note:* This is an initial hypothesis, and some images may appear contradictory.
-*   **Imbalance:** The dataset is highly imbalanced, with Class 1 (hypothesized "without accessory") being significantly more prevalent.
+    *   This is an initial hypothesis, and some images appear contradictory.
+*   **Imbalance:** The dataset is highly imbalanced, with Class 1 (hypothesized "without accessory") much more prevalent
 *   **Similarity:** The dataset bears resemblance to publicly available datasets like CelebA.
 Dataset looks similar to 'Microsoft Celeb'.
 
@@ -27,7 +27,7 @@ Two primary model architectures were explored:
     *   This architecture was chosen for its simplicity and as a baseline to understand the dataset's learnability.
 
 2.  **MobileNetV2 (Transfer Learning):**
-    *   **Rationale:** Chosen for its balance of lightweight architecture (suitable for limited compute resources like Google Colab free tier) and strong performance on general image recognition tasks (pre-trained on ImageNet).
+    *   **Why ?:** Chosen for its balance of lightweight architecture (good for limited compute resources like Google Colab free tier) and strong performance on general image recognition tasks (pre-trained on ImageNet).
     *   **Modes Explored:**
         *   **Feature Extraction:** Only the final classifier layer was replaced and trained, keeping pre-trained weights frozen.
         *   **Full Fine-tuning:** All layers of the MobileNetV2 model were unfrozen and trained with a reduced learning rate.
